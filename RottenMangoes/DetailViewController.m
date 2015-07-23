@@ -9,7 +9,6 @@
 #import "DetailViewController.h"
 #import "MapKit/MapKit.h"
 #import "AppDelegate.h"
-#import "MyUtility.h"
 #import "Venue.h"
 
 #define zoominMapArea 20000

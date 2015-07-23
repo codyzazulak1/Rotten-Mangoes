@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		97E7FDE11B617A48000550E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E7FDE01B617A48000550E9 /* CoreLocation.framework */; };
 		97E7FDE31B617A4D000550E9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E7FDE21B617A4D000550E9 /* MapKit.framework */; };
-		97E7FDE61B617B12000550E9 /* MyUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E7FDE51B617B12000550E9 /* MyUtility.m */; };
 		97E7FDE91B617BB2000550E9 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E7FDE81B617BB2000550E9 /* Venue.m */; };
 		97F839391B60233000B5C500 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F839381B60233000B5C500 /* main.m */; };
 		97F8393C1B60233000B5C500 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F8393B1B60233000B5C500 /* AppDelegate.m */; };
@@ -36,8 +35,6 @@
 /* Begin PBXFileReference section */
 		97E7FDE01B617A48000550E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		97E7FDE21B617A4D000550E9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		97E7FDE41B617B12000550E9 /* MyUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUtility.h; sourceTree = "<group>"; };
-		97E7FDE51B617B12000550E9 /* MyUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUtility.m; sourceTree = "<group>"; };
 		97E7FDE71B617BB2000550E9 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
 		97E7FDE81B617BB2000550E9 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		97F839331B60233000B5C500 /* RottenMangoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RottenMangoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,8 +111,6 @@
 				97F839631B60393900B5C500 /* MovieCollectionViewCell.m */,
 				97F839651B60677F00B5C500 /* DetailViewController.h */,
 				97F839661B60677F00B5C500 /* DetailViewController.m */,
-				97E7FDE41B617B12000550E9 /* MyUtility.h */,
-				97E7FDE51B617B12000550E9 /* MyUtility.m */,
 				97E7FDE71B617BB2000550E9 /* Venue.h */,
 				97E7FDE81B617BB2000550E9 /* Venue.m */,
 				97F839401B60233000B5C500 /* Main.storyboard */,
@@ -253,7 +248,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				97F8393C1B60233000B5C500 /* AppDelegate.m in Sources */,
-				97E7FDE61B617B12000550E9 /* MyUtility.m in Sources */,
 				97F839641B60393900B5C500 /* MovieCollectionViewCell.m in Sources */,
 				97F839391B60233000B5C500 /* main.m in Sources */,
 				97F839611B60243100B5C500 /* Movie.m in Sources */,
