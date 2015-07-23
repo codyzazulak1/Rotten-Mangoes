@@ -8,6 +8,7 @@
 
 #import "CollectionViewController.h"
 #import "MovieCollectionViewCell.h"
+#import "DetailViewController.h"
 #import "Movie.h"
 
 @interface CollectionViewController ()
@@ -50,13 +51,24 @@ static NSString * const reuseIdentifier = @"MovieCell";
                 Movie* aMovie = [[Movie alloc] initWithTitle:title andImage:image andScore:score];
                 [moviesArray addObject:aMovie];
                 self.objects = moviesArray;
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.collectionView reloadData];
+                });
             }
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.collectionView reloadData];
-            });
         }
     }];
     [dataTask resume];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"segueToMovieDetail"]) {
+        MovieCollectionViewCell *cell = (MovieCollectionViewCell *) sender;
+        NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+        Movie *movie = self.objects[indexPath.row];
+        DetailViewController *vc = segue.destinationViewController;
+        vc.movie = movie;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

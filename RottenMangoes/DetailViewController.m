@@ -26,8 +26,10 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.movie) {
-        self.titleLabel.text = [[self.movie valueForKey:@"title"] description];
-        self.ratingLabel.text = [[self.movie valueForKey:@"score"] description];
+        NSString *title = [[self.movie valueForKey:@"title"] description];
+        NSString *rating = [[self.movie valueForKey:@"score"] description];
+        self.titleLabel.text = [NSString stringWithFormat:@"Title: %@", title];
+        self.ratingLabel.text = [NSString stringWithFormat:@"Rating: %@", rating];
         
     }
 }
@@ -44,8 +46,10 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.titleLabel.text = [[self.movie valueForKey:@"title"] description];
-    self.ratingLabel.text = [[self.movie valueForKey:@"score"] description];
+    NSString *title = [[self.movie valueForKey:@"title"] description];
+    NSString *rating = [[self.movie valueForKey:@"score"] description];
+    self.titleLabel.text = [NSString stringWithFormat:@"Title: %@", title];
+    self.ratingLabel.text = [NSString stringWithFormat:@"Rating: %@", rating];
 }
 
 /*
