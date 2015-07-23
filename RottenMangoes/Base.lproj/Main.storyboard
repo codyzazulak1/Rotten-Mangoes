@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Movies-->
         <scene sceneID="3H7-nq-Wht">
             <objects>
                 <collectionViewController id="Chd-6v-q1O" customClass="CollectionViewController" sceneMemberID="viewController">
@@ -51,7 +51,7 @@
                             <outlet property="delegate" destination="Chd-6v-q1O" id="vol-kM-giC"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="9PH-Sx-PbM"/>
+                    <navigationItem key="navigationItem" title="Movies" id="9PH-Sx-PbM"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jsr-wo-D6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,27 +70,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oz2-qs-yFo">
-                                <rect key="frame" x="16" y="72" width="84" height="21"/>
+                                <rect key="frame" x="16" y="72" width="83.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Rating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8Y-aQ-9BG">
-                                <rect key="frame" x="16" y="101" width="101" height="21"/>
+                                <rect key="frame" x="16" y="100" width="101" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5Sf-zi-0ww">
+                                <rect key="frame" x="16" y="129" width="568" height="451"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" label=""/>
                         <constraints>
                             <constraint firstItem="Oz2-qs-yFo" firstAttribute="leading" secondItem="8xt-Ih-9o6" secondAttribute="leading" constant="16" id="1uz-m1-wXI"/>
                             <constraint firstItem="p8Y-aQ-9BG" firstAttribute="top" secondItem="Oz2-qs-yFo" secondAttribute="bottom" constant="8" id="B2Q-Hn-Ewv"/>
                             <constraint firstItem="p8Y-aQ-9BG" firstAttribute="leading" secondItem="8xt-Ih-9o6" secondAttribute="leadingMargin" id="Lb4-mY-oGR"/>
+                            <constraint firstItem="5Sf-zi-0ww" firstAttribute="leading" secondItem="8xt-Ih-9o6" secondAttribute="leadingMargin" id="aON-TX-r8c"/>
+                            <constraint firstItem="5Sf-zi-0ww" firstAttribute="top" secondItem="p8Y-aQ-9BG" secondAttribute="bottom" constant="8" id="cOJ-eu-3D2"/>
+                            <constraint firstItem="5Sf-zi-0ww" firstAttribute="trailing" secondItem="8xt-Ih-9o6" secondAttribute="trailingMargin" id="e7G-E3-xDv"/>
+                            <constraint firstItem="g7c-qd-0gM" firstAttribute="top" secondItem="5Sf-zi-0ww" secondAttribute="bottom" constant="20" id="flV-EQ-j9F"/>
                             <constraint firstItem="Oz2-qs-yFo" firstAttribute="top" secondItem="SxA-OG-D3M" secondAttribute="bottom" constant="8" id="qGO-sx-EqU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="5Sf-zi-0ww" id="h95-AF-oEa"/>
                         <outlet property="ratingLabel" destination="p8Y-aQ-9BG" id="z6i-Ig-oAB"/>
                         <outlet property="titleLabel" destination="Oz2-qs-yFo" id="oGP-HE-dpc"/>
                     </connections>
